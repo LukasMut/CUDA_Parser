@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cuda_dir="./cuda_infs"
+cuda_dir="./cuda/version_infs"
 mkdir -p ${cuda_dir};
 
 nvidia-smi > ${cuda_dir}/nvidia_smi.out
