@@ -1,4 +1,5 @@
-# How to parse CUDA version on current GPU node to use as a variable for e.g. conda environments
+## How to parse CUDA version on current GPU node with `nivida-smi`
+### CUDA version can subsequently be used as a variable to activate specific conda environments
 
 
 ```bash
