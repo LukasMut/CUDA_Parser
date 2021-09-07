@@ -7,7 +7,7 @@ nvidia-smi > ${cuda_dir}/nvidia_smi.out
 python3 parse_nvidia_smi.py ${cuda_dir}/nvidia_smi.out > ${cuda_dir}/cuda_version.out
 
 input="${cuda_dir}/cuda_version.out"
-while IFS= read -r line
+while read -r line
 do
 	cuda_version=${line}
 done < "$input"
