@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+import os
 import re
 import sys
+
+os.environ['PYTHONIOENCODING'] = 'UTF-8'
 
 
 def parse_cuda_version(nvidia_smi_file: str) -> str:
