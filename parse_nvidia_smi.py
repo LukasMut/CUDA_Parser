@@ -4,7 +4,8 @@
 import re
 import sys
 
-def parse_cuda_version(nvidia_smi_file : str) -> None:
+
+def parse_cuda_version(nvidia_smi_file: str) -> str:
     cuda_regex = r'\bCUDA\b(?=\b\sVersion\b)'
     version_regex = r'\d{2}(?=\.\d)'
     patch_regex = r'(?<=\.)\d+'
@@ -17,8 +18,10 @@ def parse_cuda_version(nvidia_smi_file : str) -> None:
     m = re.compile(patch_regex).search(substring)
     _, end = m.span()
     version = substring[start:end]
-    print(version)
+    return version
+
 
 if __name__ == '__main__':
     nvidia_smi_file = sys.argv[1]
-    parse_cuda_version(nvidia_smi_file)
+    cuda_version = parse_cuda_version(nvidia_smi_file)
+    print(cuda_version)
