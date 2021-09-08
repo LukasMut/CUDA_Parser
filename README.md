@@ -17,7 +17,7 @@ input = "${cuda_dir}/cuda_version.out"
 while read -r line
 do
       cuda_version=${line};
-  done < "$input"
+done < "$input"
 
 echo "CUDA Version on current GPU node: $cuda_version"
 
